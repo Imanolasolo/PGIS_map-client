@@ -14,7 +14,9 @@ We have separated this project into 3 different fields to make it easier for the
 
 * Back End: 
   * Where the main API for use is developed 
+
   * The database has been created.
+
   * Where the relationships and interactions between the different modules that make up the project are developed.
 
 * Front End Client Side:
@@ -25,13 +27,13 @@ We have separated this project into 3 different fields to make it easier for the
 
 * Front End Administrator side:
 
-  * Where the adminintration dashboard appears on the screen.
+  * Where the administration dashboard appears on the screen.
 
   * Where the administrator of project can change the registries and data completes the project.
 
 ## Front End client side
 
-In this repository we are going to document the development of the georeferencing module, describing the bas code used and the different applications, libraries and interactions that we have used.
+In this repository we are going to document the development of the georeferencing module, describing the used codebase and the different applications, libraries and interactions that we have used.
 
 To carry out this documentation, we are going to develop the used work process, the available resources and examples and images to illustrate the path we have followed.
 
