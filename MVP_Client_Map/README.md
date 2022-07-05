@@ -1,4 +1,4 @@
-![](vscode-remote://wsl%2Bubuntu/home/imanol/PGIS_map-client/MVP_Client_Map/IT4PROS%20LOGO.png)
+![IT4PROS LOGO](https://user-images.githubusercontent.com/86312558/177416312-89e38d23-2b34-43f8-abc2-77a5ede346d2.png)
 
 This project is integrated into the Holberton School Full Stack Engineer end-of-course curriculum.
 
