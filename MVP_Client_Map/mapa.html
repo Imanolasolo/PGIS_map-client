@@ -1,0 +1,127 @@
+<!--PGIS Project from IT4PROS-->
+<!DOCTYPE html>
+<html lang="en">
+<!--Define html dependencies-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Leaflet dependencies css-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>	
+    <!--CSS dependencies-->
+	<link rel="stylesheet" type="text/css" href="mapa.css">
+	<!--MiniMap dependencies-->
+    <link rel="stylesheet" type="text/css" href="Leaflet-MiniMap-master/dist/Control.MiniMap.min.css">
+    
+	<!--Title for web and Html-->
+    <title>Colombia</title>
+    <h1>Prestadores de servicios de salud en Colombia</h1>
+
+	<!--Selection frames-->
+    <select name="consulta_externa" id="consulta_externa">
+        <option value="-1">Consulta externa</option>
+        <option value="6.27723,-75.57980">HOSPITAL PABLO TOBÓN URIBE, Medellín</option>
+        <option value="6.26675,-75.56442">IPS UNIVERSITARIA CLÍNICA LEÓN XIII (Bloque 2),Medellín</option>	
+		<option value="4.57102, -74.1072">FUNDACIÓN HOSPITAL SAN CARLOS</option>
+		<option value="5.84615, -76.00930">E.S.E. HOSPITAL LA MERCED</option>
+		<option value="6.34533, -75.51664">E.S.E. HOSPITAL SANTA MARGARITA</option>
+		<option value="3.42708, -76.53271">KAMEX FISIOTERAPIA</option>
+		<option value="3.46059, -76.53013">CLÍNICA DE OCCIDENTE</option>		
+		<option value="3.41163, -76.48473">HOSPITAL ISAIAS DUARTE CANCINO E.S.E</option>		
+		<option value="11.01668, -74.84599">CLÍNICA PORTOAZUL S.A SIGLA CPA</option>
+		<option value="10.98973, -74.95579">IPS UNIDAD MEDICA ETICA E.U</option>
+		<option value="7.06974, -73.16930">CLÍNICA GIRÓN E.S.E</option>
+		<option value="7.11386, -73.10769">CENTRO DE ATENCIÓN Y DIAGNÓSTICO DE ENFERMEDADES INFECCIOSAS CDI S.A.</option>
+    </select>
+    <select name="hospitalizacion" id="hospitalizacion">
+        <option value="-1">Hospitalización</option>
+        <option value="6.27723,-75.57980">HOSPITAL PABLO TOBÓN URIBE, Medellín</option>
+        <option value="6.26675,-75.56442">IPS UNIVERSITARIA CLÍNICA LEÓN XIII (Bloque 2),Medellín</option>	
+		<option value="4.57102, -74.1072">FUNDACIÓN HOSPITAL SAN CARLOS</option>
+		<option value="5.84615, -76.00930">E.S.E. HOSPITAL LA MERCED</option>
+		<option value="6.34533, -75.51664">E.S.E. HOSPITAL SANTA MARGARITA</option>
+		<option value="3.46059, -76.53013">CLÍNICA DE OCCIDENTE</option>		
+		<option value="3.41163, -76.48473">HOSPITAL ISAIAS DUARTE CANCINO E.S.E</option>		
+		<option value="11.01668, -74.84599">CLÍNICA PORTOAZUL S.A SIGLA CPA</option>
+		<option value="10.98973, -74.95579">IPS UNIDAD MEDICA ETICA E.U</option>
+		<option value="7.06974, -73.16930">CLÍNICA GIRÓN E.S.E</option>
+		<option value="7.11386, -73.10769">CENTRO DE ATENCIÓN Y DIAGNÓSTICO DE ENFERMEDADES INFECCIOSAS CDI S.A.</option>	
+    </select>
+    <select name="laboratorio" id="laboratorio">
+		<option value="-1">Laboratorio</option>
+        <option value="4.66861, -74.05756">IMÁGENES DIAGNÓSTICAS DEL COUNTRY</option>
+		<option value="4.57102, -74.1072">FUNDACIÓN HOSPITAL SAN CARLOS</option>
+		<option value="5.84615, -76.00930">E.S.E. HOSPITAL LA MERCED</option>
+		<option value="6.34533, -75.51664">E.S.E. HOSPITAL SANTA MARGARITA</option>
+		<option value="3.46059, -76.53013">CLÍNICA DE OCCIDENTE</option>		
+		<option value="3.41163, -76.48473">HOSPITAL ISAIAS DUARTE CANCINO E.S.E</option>		
+		<option value="11.01668, -74.84599">CLÍNICA PORTOAZUL S.A SIGLA CPA</option>
+		<option value="7.06974, -73.16930">CLÍNICA GIRÓN E.S.E</option>
+		<option value="7.11386, -73.10769">CENTRO DE ATENCIÓN Y DIAGNÓSTICO DE ENFERMEDADES INFECCIOSAS CDI S.A.</option>	
+    </select>
+    <select name="cirugia" id="cirugia">
+		<option value="-1">Cirugía</option>
+        <option value="6.27723,-75.57980">HOSPITAL PABLO TOBÓN URIBE, Medellín</option>
+        <option value="6.26675,-75.56442">IPS UNIVERSITARIA CLÍNICA LEÓN XIII (Bloque 2),Medellín</option>	
+		<option value="4.57102, -74.1072">FUNDACIÓN HOSPITAL SAN CARLOS</option>
+		<option value="5.84615, -76.00930">E.S.E. HOSPITAL LA MERCED</option>
+		<option value="6.34533, -75.51664">E.S.E. HOSPITAL SANTA MARGARITA</option>
+		<option value="3.46059, -76.53013">CLÍNICA DE OCCIDENTE</option>		
+		<option value="3.41163, -76.48473">HOSPITAL ISAIAS DUARTE CANCINO E.S.E</option>		
+		<option value="11.01668, -74.84599">CLÍNICA PORTOAZUL S.A SIGLA CPA</option>
+		<option value="10.98973, -74.95579">IPS UNIDAD MEDICA ETICA E.U</option>
+		<option value="7.06974, -73.16930">CLÍNICA GIRÓN E.S.E</option>
+	</select>
+    <select name="consulta_externa_especializada" id="consulta_externa_especializada">
+        <option value="-1">Consulta externa especializada</option>
+        <option value="6.27723,-75.57980">HOSPITAL PABLO TOBÓN URIBE, Medellín</option>
+        <option value="4.57102, -74.1072">FUNDACIÓN HOSPITAL SAN CARLOS</option>
+		<option value="5.84615, -76.00930">E.S.E. HOSPITAL LA MERCED</option>
+		<option value="6.34533, -75.51664">E.S.E. HOSPITAL SANTA MARGARITA</option>
+		<option value="3.42708, -76.53271">KAMEX FISIOTERAPIA</option>
+		<option value="3.46059, -76.53013">CLÍNICA DE OCCIDENTE</option>		
+		<option value="3.41163, -76.48473">HOSPITAL ISAIAS DUARTE CANCINO E.S.E</option>		
+		<option value="3.53398, -76.29692">REHABILITACION FISICA INTEGRAL IPS EU</option>
+		<option value="11.01668, -74.84599">CLÍNICA PORTOAZUL S.A SIGLA CPA</option>
+		<option value="10.98973, -74.95579">IPS UNIDAD MEDICA ETICA E.U</option>
+		<option value="7.06974, -73.16930">CLÍNICA GIRÓN E.S.E</option>
+		<option value="7.11386, -73.10769">CENTRO DE ATENCIÓN Y DIAGNÓSTICO DE ENFERMEDADES INFECCIOSAS CDI S.A.</option>
+    </select>
+    <select name="urgencias" id="urgencias">
+        <option value="-1">Urgencias</option>
+        <option value="6.27723,-75.57980">HOSPITAL PABLO TOBÓN URIBE, Medellín</option>
+        <option value="6.26675,-75.56442">IPS UNIVERSITARIA CLÍNICA LEÓN XIII (Bloque 2),Medellín</option>	
+		<option value="4.57102, -74.1072">FUNDACIÓN HOSPITAL SAN CARLOS</option>
+		<option value="5.84615, -76.00930">E.S.E. HOSPITAL LA MERCED</option>
+		<option value="6.34533, -75.51664">E.S.E. HOSPITAL SANTA MARGARITA</option>
+		<option value="3.46059, -76.53013">CLÍNICA DE OCCIDENTE</option>		
+		<option value="3.41163, -76.48473">HOSPITAL ISAIAS DUARTE CANCINO E.S.E</option>		
+		<option value="11.01668, -74.84599">CLÍNICA PORTOAZUL S.A SIGLA CPA</option>
+		<option value="10.98973, -74.95579">IPS UNIDAD MEDICA ETICA E.U</option>
+		<option value="7.06974, -73.16930">CLÍNICA GIRÓN E.S.E</option>
+		<option value="7.11386, -73.10769">CENTRO DE ATENCIÓN Y DIAGNÓSTICO DE ENFERMEDADES INFECCIOSAS CDI S.A.</option>
+    </select>
+	<select name="vuelta_casa" id="vuelta_casa">
+		<option value="-1"></option>
+		<option value ="4.639386,-74.082412">HOME</option>
+	</select>
+		
+</head>
+<body>
+	<!--Map implementation-->
+    <div id="map"></div>
+	<button id="zoom-home-boton"></button>
+	<!--JS map dependences-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   		crossorigin=""></script>
+	<!--Leaflet JS dependences-->
+    <script src="Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>    
+    <!--JS Dependences-->
+    <script src="mapa.js"></script>
+    
+	</body>
+
+</html>
