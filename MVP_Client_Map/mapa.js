@@ -70,10 +70,39 @@ document.getElementById('urgencias').addEventListener('change', function(e){
 
 document.getElementById('vuelta_casa').addEventListener('change', function(e){
     let coords = e.target.value.split(",");
-    map.flyTo(coords,18);
+    map.flyTo(coords,8);
 })
 
-
+map
+  .locate({
+    // https://leafletjs.com/reference-1.7.1.html#locate-options-option
+    setView: true,
+    enableHighAccuracy: true,
+  })
+  // if location found show marker and circle
+  .on("locationfound", (e) => {
+    console.log(e);
+    // marker
+    const marker = L.marker([e.latitude, e.longitude]).bindPopup(
+      "You are here :)"
+    );
+    // circle
+    const circle = L.circle([e.latitude, e.longitude], e.accuracy / 2, {
+      weight: 2,
+      color: "red",
+      fillColor: "red",
+      fillOpacity: 0.1,
+    });
+    // add marker
+    map.addLayer(marker);
+    // add circle
+    map.addLayer(circle);
+  })
+  // if error show alert
+  .on("locationerror", (e) => {
+    console.log(e);
+    alert("Location access denied.");
+  });
 
 
 
