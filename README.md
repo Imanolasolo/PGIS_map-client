@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# PGIS PROJECT (Client_Map_FrontEnd) 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![IT4PROS LOGO](https://user-images.githubusercontent.com/86312558/177416312-89e38d23-2b34-43f8-abc2-77a5ede346d2.png)
 
-## Available Scripts
+## Background.
 
-In the project directory, you can run:
+This project is integrated into the `Holberton School` Full Stack Engineer end-of-course curriculum.
 
-### `npm start`
+The project is included in the cooperation of companies with Holberton, the company that selected us is `SIS Vida` from Colombia.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The main idea of the project is the creation of a visualization of a series of health services provided by an insurance company. This visualization is within a georeferencing system (map embedded in a web), where the lenders of the area selected by the user's GPS location will appear.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+We have separated this project into 3 different fields to make it easier for the end user or client to develop and understand. These parts are:
 
-### `npm test`
+* Back End: 
+  * Where the main API for use is developed 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * The database has been created.
 
-### `npm run build`
+  * Where the relationships and interactions between the different modules that make up the project are developed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Front End Client Side:
+  
+  * Where the georeferencing map appears on the screen to show the points of interest of the project.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  * Where the client (user) interacts with the map.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Front End Administrator side:
 
-### `npm run eject`
+  * Where the administration dashboard appears on the screen.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  * Where the administrator of project can change the registries and data completes the project.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Front End client side
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In this repository we are going to document the development of the georeferencing module, describing the used codebase and the different applications, libraries and interactions that we have used.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To carry out this documentation, we are going to develop the used work process, the available resources and examples and images to illustrate the path we have followed.
 
-## Learn More
+## Used work process
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We have created a framework based on agile technology that we will demonstrate below:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* `Plan`: 
+  
+  * Develop the business idea or project idea.
 
-### Code Splitting
+  * Develop the technology to be used
+  
+  * Collect software resources
+  
+  * Develop time management systems.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* `Design`:
 
-### Analyzing the Bundle Size
+  * Divide the process into modules for better understanding
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  * Create different modules of software (recursive actions)
 
-### Making a Progressive Web App
+* `Development`:
+  
+  * Build the codebase.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  * Build the screenshots and MVP.
 
-### Advanced Configuration
+  * Build the containers and servers to deploy the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* `Test`:
 
-### Deployment
+  * Build the tests to run in different environments (app, web, servers, browsers...)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  * Improve the tests for MVP.
 
-### `npm run build` fails to minify
+* `Deploy`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  * Present the version to customers or public.
+
+  * Accept the changes or different oppinions.
+
+* `Review and go to next development or requirement of the project.`
+
+## Resources:
+
+We used different frameworks and libraries wich we will explain below:
+
+  * HTML CSS and JavaScript Framework:
+    
+    * HTML to build the web app to show.
+
+    * CSS to apply styles to an HTML page.
+
+    * JavaScript to add interactions and dependences to the HTML page.
+
+  * Leaflet library and dependences to build and interact with the georeferencing and mapping modules and show the result in the screen.
+
+  * See more documentation at [Leaflet documentation](https://leafletjs.com/)
+
+  * We used VSC( Visual studio Code) IDE to build the codebase.
+
+## Installing, compiling and using
+	
+> Only install cloning this repository on your local device:  https://github.com/Imanolasolo/PGIS_map-client.git
+
+## Credits
+
+## Author(s):blue_book:
+
+Work is owned and maintained by:
+* Imanol Asolo <[3848](mailto:3848@holbertonschool.com)> [![M](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/25px-Octicons-mark-github.svg.png)](https://github.com/Imanolasolo) [![M](https://upload.wikimedia.org/wikipedia/fr/thumb/c/c8/Twitter_Bird.svg/25px-Twitter_Bird.svg.png)](https://twitter.com/jjusturi) [![M](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/25px-LinkedIn_logo_initials.png)](https://www.linkedin.com/in/imanol-asolo-5ba9b42a/)
+
+## Acknowledgments :mega: 
+
+### **`Holberton School`** (*providing guidance*)
+This program was written as part of the curriculum for Holberton School.
+Holberton School is a campus-based full-stack software engineering program
+that prepares students for careers in the tech industry using project-based
+peer learning. For more information, visit [this link](https://www.holbertonschool.com/).
+<p align="center">
+	<img src="https://assets.website-files.com/6105315644a26f77912a1ada/610540e8b4cd6969794fe673_Holberton_School_logo-04-04.svg" alt="This is a secret;)">
+</p>
+
+
+
+
+
+
+
